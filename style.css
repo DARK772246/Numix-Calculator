@@ -1,0 +1,93 @@
+/* ======== Gradient Background ======== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff784e, #5020ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  box-sizing: border-box; /* Added for consistent padding */
+}
+
+/* ======== Calculator Container ======== */
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+/* ======== Header ======== */
+.header {
+  text-align: center;
+  padding: 20px 10px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* ======== Display ======== */
+.display {
+  padding: 20px;
+}
+
+.display input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem; /* Increased font size */
+  text-align: right;
+  outline: none;
+  padding: 5px 0; /* Added padding */
+  box-sizing: border-box; /* Added for consistent padding */
+}
+
+/* ======== Buttons ======== */
+.buttons,
+.sci {
+  display: grid;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.buttons {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20px;
+}
+
+.sci {
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Changed to auto-fit and minmax */
+}
+
+button {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  touch-action: manipulation; /* Better mobile tap */
+  user-select: none; /* Prevent text selection on tap */
+}
+
+button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.op { background: rgba(108,99,255,0.4); }
+.equal { background: #6c63ff; }
